@@ -1,0 +1,142 @@
+:root {
+  --bg-color: #0d0d0d;
+  --panel-bg: #1a1a1a;
+  --neon-blue: #00f0f0;
+  --neon-purple: #a000f0;
+  --text-color: #ffffff;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+h1 {
+  font-size: 3rem;
+  margin: 0;
+  text-shadow: 0 0 10px var(--neon-blue), 0 0 20px var(--neon-purple);
+  letter-spacing: 5px;
+}
+
+.game-container {
+  display: flex;
+  gap: 30px;
+  background: var(--panel-bg);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5), 0 0 10px rgba(160, 0, 240, 0.3);
+  border: 1px solid #333;
+}
+
+.main-area {
+  position: relative;
+  line-height: 0;
+}
+
+.game-board {
+  border: 4px solid #333;
+  background: #000;
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.9);
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 10;
+  border-radius: 4px;
+}
+
+.game-over h2, .paused h2 {
+  font-size: 2.5rem;
+  color: #ff0055;
+  text-shadow: 0 0 10px #ff0055;
+  margin-bottom: 20px;
+}
+
+.paused h2 {
+  color: var(--neon-blue);
+  text-shadow: 0 0 10px var(--neon-blue);
+}
+
+button {
+  background: transparent;
+  border: 2px solid var(--neon-blue);
+  color: var(--neon-blue);
+  padding: 10px 25px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+button:hover {
+  background: var(--neon-blue);
+  color: #000;
+  box-shadow: 0 0 20px var(--neon-blue);
+}
+
+.side-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  min-width: 150px;
+}
+
+.stat-box {
+  background: #222;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+  border: 1px solid #444;
+}
+
+.stat-box h3 {
+  margin: 0 0 10px 0;
+  font-size: 0.9rem;
+  color: #888;
+  letter-spacing: 2px;
+}
+
+.stat-box p {
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--neon-blue);
+}
+
+.controls-help {
+  font-size: 0.8rem;
+  color: #666;
+  margin-top: auto;
+  line-height: 1.6;
+}
+
+footer {
+  margin-top: 10px;
+  font-size: 0.8rem;
+  color: #444;
+}
